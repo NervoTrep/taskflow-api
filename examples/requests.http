@@ -1,0 +1,28 @@
+### Health
+GET http://localhost:8000/health
+
+### Create a task
+POST http://localhost:8000/api/v1/tasks
+Content-Type: application/json
+
+{
+  "title": "Learn FastAPI",
+  "description": "Build and test a REST API",
+  "priority": "high",
+  "due_date": "2027-01-15"
+}
+
+### List tasks
+GET http://localhost:8000/api/v1/tasks?status=todo&limit=10
+
+### Update a task (replace 1 with a real ID)
+PATCH http://localhost:8000/api/v1/tasks/1
+Content-Type: application/json
+
+{"status": "done"}
+
+### Task statistics
+GET http://localhost:8000/api/v1/stats
+
+### Delete a task (replace 1 with a real ID)
+DELETE http://localhost:8000/api/v1/tasks/1
